@@ -7,6 +7,34 @@ requires-python = ">=3.11"
 dependencies = [
     "fastapi[standard]>=0.129.0",
     "openai>=2.21.0",
+    "streamlit>=1.54.0",
     "transformers>=5.2.0",
     "uvicorn>=0.41.0",
 ]
+
+[dependency-groups]
+dev = [
+    "bandit>=1.9.3",
+    "loguru>=0.7.3",
+    "mypy>=1.19.1",
+    "pytest>=9.0.2",
+    "ruff>=0.15.1",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes (imports inutilisés, variables non utilisées)
+    "I",   # isort (tri des imports)
+    "UP",  # pyupgrade (syntax moderne)
+    "B",   # flake8-bugbear (bugs courants)
+    "SIM", # flake8-simplify (simplifications)
+]
+
+[tool.ruff.format]
+quote-style = "double"
