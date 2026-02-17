@@ -25,7 +25,7 @@ uv init genai-fastapi-service
 cd genai-fastapi-service
 
 # Fixer la version Python
-uv python pin 3.11
+uv python pin 3.12
 ```
 
 Cela génère la structure suivante :
