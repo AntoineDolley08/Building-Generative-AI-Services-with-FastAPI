@@ -26,6 +26,7 @@ cd genai-fastapi-service
 
 # Fixer la version Python
 uv python pin 3.12
+
 ```
 
 Cela génère la structure suivante :
@@ -165,8 +166,7 @@ curl "http://127.0.0.1:8000/chat?prompt=Explain%20ASGI%20in%20one%20sentence"
 
 ```bash
 # Formatter + linter
-uv run ruff format .
-uv run ruff check . --fix
+uv run ruff format . && uv run ruff check . --fix
 
 # Type checking
 uv run mypy main.py
